@@ -1,0 +1,15 @@
+
+<%= image_tag @photo.file_location.url, size: "100%", class: "img-thumbnail" %>
+<table class="table table-striped table-condensed">
+  <tr>
+    <td><%= @photo.title %></td>
+  </tr>
+  <tr>
+    <td><%= @photo.date %></td>
+  </tr>
+  <tr>
+    <td><%= simple_format(@photo.description) %></td>
+  </tr>
+</table>
+
+<p><%= link_to 'Back to index', photos_path %></p>
