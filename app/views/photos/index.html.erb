@@ -5,17 +5,21 @@
 </div>
 <br/>
 <div class="container text-center ">
-  <% @photos.each do |photo| %>
-      <%= image_tag photo.file_location.url, size: "300", class: "img-thumbnail" %>
-      <div>
-      <%= photo.title %>
-      <br/>
-      <button class="btn btn-default" type="submit"><%= link_to 'Show', photo_path(photo) %></button>
-      <button class="btn btn-default" type="submit"><%= link_to 'Edit', edit_photo_path(photo) %></button>
-      <button class="btn btn-default" type="submit"><%= link_to 'Destroy', photo_path(photo), method: :delete, data:{ confirm: "Are you sure?" } %></button>  
+
+    <% @photos.each do |photo| %>
+      <div class="content">
+        <div class="photo">
+          <%= image_tag photo.file_location.url, class: "img-thumbnail" %>
+        </div>
+        <div class="title">
+          <%= photo.title %>
+          <br/>
+          <button class="btn btn-default" type="submit"><%= link_to 'Show', photo_path(photo) %></button>
+          <button class="btn btn-default" type="submit"><%= link_to 'Edit', edit_photo_path(photo) %></button>
+          <button class="btn btn-default" type="submit"><%= link_to 'Destroy', photo_path(photo), method: :delete, data:{ confirm: "Are you sure?" } %></button>
+        </div>  
       </div>
-      
-  <% end %>
+    <% end %>
 
 </div>
 
