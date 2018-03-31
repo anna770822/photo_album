@@ -5,7 +5,7 @@ CarrierWave.configure do |config|
       provider:              'AWS',
       aws_access_key_id:     ENV['AKIAIMUYFZW2KARVNRCA'],
       aws_secret_access_key: ENV['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'],
-      region:                'us-west-2'
+      region:                ENV['us-west-2']
     }
     config.fog_directory  = ENV['photoalbum-assets']
   else
