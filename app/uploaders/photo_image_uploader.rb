@@ -11,7 +11,7 @@ class PhotoImageUploader < CarrierWave::Uploader::Base
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
-    'http://s3.amazonaws.com/bucketname/photoalbum'
+    'http://s3.amazonaws.com/bucketname/photoalbum-assets'
   end
 
 
