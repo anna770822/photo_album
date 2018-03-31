@@ -4,9 +4,9 @@
   <button class="btn btn-default" type="submit"><%= link_to 'New Photo', new_photo_path %></button>
 </div>
 <br/>
-<div class="container text-center ">
 
-    <% @photos.each do |photo| %>
+  <% @photos.each do |photo| %>
+  <div class="container text-center ">
       <div class="content">
         <div class="photo">
           <%= image_tag photo.file_location.url, class: "img-thumbnail" %>
@@ -17,10 +17,13 @@
           <button class="btn btn-default" type="submit"><%= link_to 'Show', photo_path(photo) %></button>
           <button class="btn btn-default" type="submit"><%= link_to 'Edit', edit_photo_path(photo) %></button>
           <button class="btn btn-default" type="submit"><%= link_to 'Destroy', photo_path(photo), method: :delete, data:{ confirm: "Are you sure?" } %></button>
+          <button><%= social_share_button_tag(photo.title)%></button>
+              <%= social_share_button_tag('Share to Facebook', :url => course_path(@course), desc: @course.name) %>
         </div>  
       </div>
-    <% end %>
 
-</div>
+  </div>
+  <% end %>
+
 
 
