@@ -6,7 +6,7 @@
 <br/>
 
   <% @photos.each do |photo| %>
-  <div class="container text-center ">
+  <div class="container text-center col-xs-12 col-sm-4 col-md-3">
       <div class="content">
         <div class="photo">
           <%= image_tag photo.file_location.url, class: "img-thumbnail" %>
@@ -17,8 +17,7 @@
           <button class="btn btn-default" type="submit"><%= link_to 'Show', photo_path(photo) %></button>
           <button class="btn btn-default" type="submit"><%= link_to 'Edit', edit_photo_path(photo) %></button>
           <button class="btn btn-default" type="submit"><%= link_to 'Destroy', photo_path(photo), method: :delete, data:{ confirm: "Are you sure?" } %></button>
-          <button><%= social_share_button_tag(photo.title)%></button>
-          <%= social_share_button_tag('Share to Facebook', :url => photos_path(photo) %>
+   
         </div>  
       </div>
 
