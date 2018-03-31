@@ -63,8 +63,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #Carrierwave
 gem 'carrierwave'
-gem 'mini_magick'
-gem 'fog'
 gem 'fog-aws'
 #Bootstrap
 
