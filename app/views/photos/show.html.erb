@@ -1,10 +1,13 @@
+<html>
+<head>
 <script>
    function myFunction() {
    var x = document.URL;
-   document.getElementById("share").src = 'https://www.facebook.com/plugins/share_button.php?href='+x+'&layout=button_count&size=large&mobile_iframe=true&width=83&height=28&appId';
+   document.getElementById("share").src ='https://www.facebook.com/plugins/share_button.php?href='+x+'&layout=button_count&size=large&mobile_iframe=true&width=83&height=28&appId';
   }
   </script>
- <body onload="myFunction()">
+</head>
+<body onload="myFunction()">
 <div class="container text-center show">
   <%= image_tag @photo.file_location.url, class: "img-thumbnail" %>
 </div>
@@ -23,5 +26,6 @@
 
   <button class="btn btn-default"><%= link_to 'Back to index', photos_path %></button>
 </div>
- <iframe id="share" src="" width="83" height="28" style="border:none;overflow:hidden" scrolling="no"  frameborder="0" allowTransparency="true"></iframe>
+ <iframe id="share" src=" " width="83" height="28" style="border:none;overflow:hidden" scrolling="no"  frameborder="0" allowTransparency="true"></iframe>
  </body>
+</html>
