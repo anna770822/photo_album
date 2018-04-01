@@ -1,13 +1,10 @@
-<div id="fb-root"></div>
-<script>
-  (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.12&appId=1818422994855649&autoLogAppEvents=1';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
+
+  <script>
+   function myFunction() {
+   var x = document.URL;
+   document.getElementById("share").src = 'https://www.facebook.com/plugins/share_button.php?href='+x+'&layout=button_count&size=large&mobile_iframe=true&width=83&height=28&appId';
+  }
+  </script>
 <div class="container text-center show">
   <%= image_tag @photo.file_location.url, class: "img-thumbnail" %>
 </div>
@@ -26,4 +23,6 @@
 
   <button class="btn btn-default"><%= link_to 'Back to index', photos_path %></button>
 </div>
-<div class="fb-share-button" data-href="<% '#{https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffirst-album.herokuapp.com%2Fphotos%2F}'+'#{@photo.id}'+'&amp;src=sdkpreparse'%>" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="<% '#{https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffirst-album.herokuapp.com%2Fphotos%2F}'+'#{@photo.id}'+'&amp;src=sdkpreparse'%>" class="fb-xfbml-parse-ignore">分享</a></div>
+ <body onload="myFunction()">
+ <iframe id="share" src="" width="83" height="28" style="border:none;overflow:hidden" scrolling="no"  frameborder="0" allowTransparency="true"></iframe>
+ </body>
