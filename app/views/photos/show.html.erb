@@ -1,7 +1,15 @@
+ <script>
+   function myFunction() {
+   var x = document.URL;
+   document.getElementById("jinu").src = 'https://www.facebook.com/plugins/share_button.php?href='+x+'&layout=button_count&size=large&mobile_iframe=true&width=83&height=28&appId';
+  }
+  </script>
+
+
 <div class="container text-center show">
   <%= image_tag @photo.file_location.url, class: "img-thumbnail" %>
 </div>
-<div class="container text-center">
+<div class="container text-center" onload="myFunction()">
   <table class="table table-striped table-condensed">
     <tr>
       <td><%= @photo.title %></td>
