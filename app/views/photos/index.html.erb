@@ -17,7 +17,7 @@
           <button class="btn btn-default" type="submit"><%= link_to 'Show', photo_path(photo) %></button>
           <button class="btn btn-default" type="submit"><%= link_to 'Edit', edit_photo_path(photo) %></button>
           <button class="btn btn-default" type="submit"><%= link_to 'Destroy', photo_path(photo), method: :delete, data:{ confirm: "Are you sure?" } %></button>
-           <%= social_share_button_tag('photo.title', :url => photos_path, desc: photo.title) %>
+           <%= social_share_button_tag('#{photo.title}', :url => photos_path, desc: photo.title) %>
 
         </div>  
       </div>
